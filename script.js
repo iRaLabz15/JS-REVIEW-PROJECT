@@ -9,7 +9,7 @@ const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 
 // Function to render todos
-function renderTools() {
+function renderTodos() {
     todoList.innerHTML = ''; // Clear the list
     todos.forEach((todo, index) => {
         const li = document.createElement('li');
@@ -47,7 +47,7 @@ function editTodo(index) {
 function deleteTodo(index) {
     if (confirm('Are you sure you want to delete this todo?')) {
         todos.splice(index, 1);
-        renderTools();
+        renderTodos();
     }
 }
 
